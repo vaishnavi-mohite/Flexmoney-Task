@@ -1,0 +1,29 @@
+ER Diagram with its Attributes :
+
++-----------------+       +---------------------+       +---------------+
+|   Registration  |       |       Batch         |       |     User      |
++-----------------+       +---------------------+       +---------------+
+| registration_id |       | batch_id            |       | user_id       |
+| firstName       |       | time                |       | firstName     |
+| lastName        |       +---------------------+       | lastName      |
+| gender          |                                     | gender        |
+| age             |                                     | age           |
+| paymentfee      |                                     | batch         |
++-----------------+                                     | paymentfee    |
+                                                         +---------------+
+ 
+Registration Entity:
+Attributes: registration_id (primary key), firstName, lastName, gender, age, paymentfee
+Represents the user registration information.
+
+Batch Entity:
+Attributes: batch_id (primary key), time
+Represents the different batch times available for yoga classes.
+
+User Entity:
+Attributes: user_id (primary key), firstName, lastName, gender, age, batch, paymentfee
+Represents user details associated with each registration.
+
+Relationships:
+Each registration is associated with one batch (Many-to-One relationship between Registration and Batch).
+Each registration is associated with one user (One-to-One relationship between Registration and User).
